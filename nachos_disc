@@ -1,0 +1,10 @@
+	Nachos
+Part I. Nachos
+I> Start process
+    Nachos.machine.Machine.main is responsible for initialize the
+machine simulator. Then it passes control to the AutoGrader. The
+AutoGrader create a kernel and start the OS.
+    Nachos.machine.Machine provides all of the important hard ware
+simulations and hard ware access interface to control these hard
+wares including interrupt controller, timer, MIPS processor.
+II> The big-picture

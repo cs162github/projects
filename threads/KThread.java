@@ -44,9 +44,12 @@ public class KThread {
      */
     public KThread() {
 	if (currentThread != null) {
+	    // when there is a running thread , then 
+            // create a TCB object for this KThread and schedule it later.
 	    tcb = new TCB();
 	}	    
 	else {
+	    // the first thread.
 	    readyQueue = ThreadedKernel.scheduler.newThreadQueue(false);
 	    readyQueue.acquire(this);	    
 
@@ -428,6 +431,7 @@ public class KThread {
      * on the ready queue and not running).
      */
     private int status = statusNew;
+    // thread name.
     private String name = "(unnamed thread)";
     private Runnable target;
     private TCB tcb;

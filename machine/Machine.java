@@ -53,6 +53,9 @@ public final class Machine {
 	privilege.stats = stats;
 
 	securityManager.enable();
+        
+        // create Interrupt controller, Timer, Elevator controller,
+        // MIPS processor, Console, File system.
 	createDevices();
 	checkUserClasses();
 
