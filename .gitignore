@@ -11,6 +11,14 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 
-*.wap
+*.swp
 *.o
+*~
+# reject files produced via LaTex.
+*.tex
+*.aux
+*.toc
+*.log
 
+# reject files produced via ctags
+tags
