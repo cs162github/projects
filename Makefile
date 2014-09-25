@@ -40,6 +40,8 @@ all: $(CLASSFILES)
 
 nachos/%.class: ../%.java
 	javac -classpath . -d . -sourcepath ../.. -g $<
+debug: $(CLASSFILES)
+	jdb -sourcepath ../.. nachos.machine.Machine
 
 clean:
 	rm -f */*/*.class

@@ -32,6 +32,7 @@ public final class Machine {
 	// get the nachos directory (./nachos)
 	nachosDirectory = new File(baseDirectory, "nachos");
 
+	// default value is set to 'null'
 	String testDirectoryName =
 	    Config.getString("FileSystem.testDirectory");
 
@@ -54,7 +55,7 @@ public final class Machine {
 
 	securityManager.enable();
         
-        // create Interrupt controller, Timer, Elevator controller,
+        // Create Interrupt controller, Timer, Elevator controller,
         // MIPS processor, Console, File system.
 	createDevices();
 	checkUserClasses();
@@ -411,6 +412,7 @@ public final class Machine {
 
     private static String[] args = null;
 
+    // Stats get started to calculate at the most beginning.
     private static Stats stats = new Stats();
 
     private static int numPhysPages = -1;

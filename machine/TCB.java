@@ -60,8 +60,16 @@ public final class TCB {
 	 * then destroy() has not yet set javaThread back to null, so we can
 	 * use javaThread as a reliable indicator of whether or not start() has
 	 * already been invoked.
+	 *
+	 * Once the thread has been started and not been done, then 'javaThread'
+	 * must not be null. So two possible ways: 
+	 * 1> javaThread == null and done = true 
+	 *    That means this thread is just been destroyed.
+	 * 2> javaThread == null and done = false
+	 *    That measn this is the first call to start().
 	 */
 	Lib.assertTrue(javaThread == null && !done);
+
 
 	/* Make sure there aren't too many running TCBs already. This
 	 * limitation exists in an effort to prevent wild thread usage.

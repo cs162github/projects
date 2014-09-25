@@ -39,6 +39,7 @@ public class AutoGrader {
 
 	System.out.print(" grader");
 
+	// currently does nothing
 	init();
 
 	System.out.print("\n");	

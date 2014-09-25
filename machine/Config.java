@@ -23,6 +23,7 @@ public final class Config {
 	System.out.print(" config");
 	
 	Lib.assertTrue(!loaded);
+	// The default 'loaded' is set to 'false'
 	loaded = true;
 	
 	configFile = fileName;

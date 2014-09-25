@@ -23,7 +23,8 @@ public final class Timer {
      */
     public Timer(Privilege privilege) {
 	System.out.print(" timer");
-	
+	// The privilege contains a NachosSecurityManager and some other
+	// machine dependent hardware privilege.	
 	this.privilege = privilege;
 	
 	timerInterrupt = new Runnable() {

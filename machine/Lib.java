@@ -40,6 +40,7 @@ public final class Lib {
      * @param	randomSeed	the seed for the random number generator.
      */
     public static void seedRandom(long randomSeed) {
+	// the default randomSeed is set to 0.
 	assertTrue(random == null);
 	random = new Random(randomSeed);
     }

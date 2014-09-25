@@ -50,6 +50,10 @@ public class NachosSecurityManager extends SecurityManager {
 	doPrivileged(new Runnable() {
 	    public void run() {
 		System.setSecurityManager(NachosSecurityManager.this);
+		// This anonymous class is a inner class of NachosSecurityManager,
+		// so we want to refers the outer class, we need to specify its outer
+		// class, that is NachosSecurityManager.this; When you just use 'this'
+		// it will refer to the newly constructed class.
 	    }
 	});
     }
